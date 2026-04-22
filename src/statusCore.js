@@ -342,7 +342,7 @@ export function verdictFromEvidence(
     totalRelevantItems: items.length,
     errors,
     method:
-      "Daily RSS/news search scan. The newest direct open/closed report drives the verdict; threats and hypotheticals are treated as risk, not closure. This is not AIS, legal, insurance, or navigation advice.",
+      "Daily RSS/news search scan. The most recent conclusive open/closed report drives the verdict; newer threats and hypotheticals are treated as risk, not closure. This is not AIS, legal, insurance, or navigation advice.",
   };
 
   if (latestDecisive?.signal === "closed") {
@@ -351,10 +351,10 @@ export function verdictFromEvidence(
       status: "closed",
       answer: "Likely closed",
       headline: latestOpen
-        ? "The newest direct report says closed, after earlier open-language coverage."
-        : "The newest direct report says the Strait is closed or traffic is halted.",
+        ? "The most recent conclusive report says closed, after earlier open-language coverage."
+        : "The most recent conclusive report says the Strait is closed or traffic is halted.",
       summary:
-        "The tracker gives the latest direct update the steering wheel. At this point the Strait is not a place for cheerful assumptions.",
+        "The tracker follows the latest conclusive open/closed signal. Newer threats stay in the risk bucket until a source reports an actual closure or reopening.",
     };
   }
 
@@ -364,10 +364,10 @@ export function verdictFromEvidence(
       status: "open",
       answer: "Reported open",
       headline: latestClosed
-        ? "The newest direct report says open, after earlier closure-language coverage."
-        : "The newest direct report says open or resumed transit.",
+        ? "The most recent conclusive report says open, after earlier closure-language coverage."
+        : "The most recent conclusive report says open or resumed transit.",
       summary:
-        "A newer open/reopened signal beat the older closure signal. Civilization has selected the least dramatic option for now.",
+        "The latest conclusive open/reopened signal beat the older closure signal. Newer threats stay in the risk bucket until a source reports an actual closure.",
     };
   }
 

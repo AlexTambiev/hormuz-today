@@ -47,6 +47,6 @@ Then push that change and redeploy.
 - Locally, the cache is written to `data/status.json` and ignored by git.
 - On Cloudflare, the cache is written to Workers KV.
 - The classifier treats direct closure/blockage reporting as stronger than threats, warnings, or hypothetical language.
-- The newest direct open/closed report drives the displayed verdict.
+- The most recent conclusive open/closed report drives the displayed verdict; newer threats or hypotheticals are treated as risk.
 
 This is a news scan, not AIS tracking, legal advice, insurance guidance, or navigation advice.

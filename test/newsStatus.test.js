@@ -97,3 +97,17 @@ test("threat evidence does not become a closed verdict", () => {
   const verdict = verdictFromEvidence(evidence, [], []);
   assert.equal(verdict.status, "disrupted");
 });
+
+test("newer threat evidence does not override older conclusive evidence", () => {
+  const evidence = [
+    classifyItem(
+      itemAt("Shipping resumes as Strait of Hormuz reopens", "2026-04-21T12:00:00.000Z"),
+    ),
+    classifyItem(
+      itemAt("Iran warns it could close the Strait of Hormuz", "2026-04-22T12:00:00.000Z"),
+    ),
+  ];
+  const verdict = verdictFromEvidence(evidence, [], []);
+  assert.equal(verdict.status, "open");
+  assert.match(verdict.method, /most recent conclusive open\/closed report/);
+});

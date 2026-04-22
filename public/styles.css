@@ -248,6 +248,48 @@ h2 {
   margin-bottom: 24px;
 }
 
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+.signal-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin: 14px 0 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.2;
+  list-style: none;
+}
+
+.signal-key li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.signal-key__mark {
+  width: 22px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--line);
+}
+
+.signal-key__mark--closed {
+  background: rgba(182, 64, 58, 0.72);
+}
+
+.signal-key__mark--open {
+  background: rgba(11, 92, 103, 0.72);
+}
+
+.signal-key__mark--risk {
+  background: rgba(215, 155, 43, 0.78);
+}
+
 .evidence-list {
   display: grid;
   gap: 1px;
