@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A daily news-scan tracker for whether the Strait of Hormuz appears open today."
+    />
+    <title>Is the Strait of Hormuz Open Today?</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero__shade"></div>
+        <nav class="topbar" aria-label="Tracker controls">
+          <a class="brand" href="/">Hormuz Today</a>
+          <button class="icon-button" id="refresh-button" type="button" aria-label="Refresh now">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+              <path
+                d="M19 8a7 7 0 1 0 1 4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M19 3v5h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </nav>
+
+        <div class="hero__content">
+          <p class="eyebrow">Daily news-scan status</p>
+          <h1 id="page-title">Is the Strait of Hormuz open today?</h1>
+          <div class="verdict" data-status="loading" id="verdict">
+            <p class="verdict__label">Today's answer</p>
+            <p class="verdict__answer" id="answer">Checking the feeds</p>
+            <p class="verdict__summary" id="summary">
+              The global economy is pacing politely while the headlines load.
+            </p>
+          </div>
+        </div>
+
+        <p class="photo-credit">
+          Photo: U.S. Navy via Wikimedia Commons
+        </p>
+      </section>
+
+      <section class="status-band" aria-label="Status details">
+        <div class="status-grid">
+          <div>
+            <p class="section-kicker">Verdict</p>
+            <h2 id="headline">Loading today's scan</h2>
+            <p id="method" class="muted">
+              Closure requires direct closure or blockage language; threats are treated as risk.
+            </p>
+          </div>
+          <dl class="facts">
+            <div>
+              <dt>Generated</dt>
+              <dd id="generated-at">--</dd>
+            </div>
+            <div>
+              <dt>Lookback</dt>
+              <dd id="lookback">--</dd>
+            </div>
+            <div>
+              <dt>Relevant items</dt>
+              <dd id="relevant-count">--</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="content" aria-label="Evidence">
+        <div class="section-heading">
+          <p class="section-kicker">Evidence</p>
+          <h2>What moved the needle</h2>
+        </div>
+        <div class="evidence-list" id="evidence-list" aria-live="polite"></div>
+      </section>
+
+      <section class="content content--two" aria-label="Source health and caveats">
+        <div>
+          <p class="section-kicker">Feed health</p>
+          <h2>Sources checked</h2>
+          <ul class="source-list" id="source-list"></ul>
+        </div>
+        <div class="caveat">
+          <p class="section-kicker">Caveat</p>
+          <h2>A serious tracker with a raised eyebrow</h2>
+          <p>
+            This page scans public news feeds once per day and displays the evidence it used.
+            It does not replace AIS vessel tracking, official navigational warnings, sanctions
+            advice, marine insurance guidance, or common sense with a hull number.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

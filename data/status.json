@@ -1,0 +1,133 @@
+{
+  "date": "2026-04-22",
+  "timezone": "Europe/London",
+  "generatedAt": "2026-04-22T07:32:50.709Z",
+  "lookbackDays": 7,
+  "sourceHealth": [
+    {
+      "source": "Google News: exact Strait of Hormuz",
+      "ok": true,
+      "count": 100
+    },
+    {
+      "source": "Google News: closure and shipping terms",
+      "ok": true,
+      "count": 100
+    },
+    {
+      "source": "Bing News: Strait of Hormuz",
+      "ok": true,
+      "count": 12
+    },
+    {
+      "source": "gCaptain search feed",
+      "ok": true,
+      "count": 12
+    }
+  ],
+  "evidence": [
+    {
+      "title": "Trump says Iran wants to keep Strait of Hormuz closed to ‘save face’ - Anadolu Ajansı",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUV9ZeTMzQWk0QlJIWmx0Wi04LVRsYXFlbEQ5SEV0TmNQU3dSOWc0TkZSV09FUGZKTnlMSm5jSXdpRURteV85VnJZTy0wX2xwWVQ2cWdFVU9OSmZ4N1ZLeldIV0N2cUphX2tJLUFWMURRaWRzSGo0REZBWDJqaUlxdjRfQjZBc2NoaW5fVjhUYVZLaERDVjlQektxWC1lVS0wTHctaGZib2JMYklSV055SzQ2N1hJcVBhb3BB?oc=5",
+      "source": "Anadolu Ajansı",
+      "feed": "Google News: closure and shipping terms",
+      "publishedAt": "2026-04-22T04:05:50.000Z",
+      "summary": "Trump says Iran wants to keep Strait of Hormuz closed to ‘save face’ &nbsp;&nbsp; Anadolu Ajansı",
+      "signal": "closed",
+      "weight": 5,
+      "reason": "Uses direct closure/blockage language without being framed as hypothetical.",
+      "credibility": 1
+    },
+    {
+      "title": "Trump says Iran keeping Strait of Hormuz closed to ‘save face’ - The Hill",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPOHhER3pFeTd2cnYyUTdFZ0xzQTJ4dUUtMVVGWGU0Y3p6dVNxRldBZmJIU2ZuaVB5ODlmS1B3cE9lSk9UNldiQmhSa3d1RjhYYjNPYkc1Sm1hUWtscl9zb2NzRnREMjVPUE85WDkxeUJnbWQyUGluYzZ5TENQMGVmbFNnYVBnc1dWM2lYUW1sVGd5cnpjS3FGUVIxQklUUVZtWjB4dFBSa9IBrAFBVV95cUxNZGFRb0J5Q2EzelVtM0x3akRqa25iVlJxSUU4c1BpSDQxaXpybnBMVWo1dlRyOTVpQjNPV1VmT1hJOVBxX1dlRXhXaVFBVFFuRi0zYVhfRE10U0xlRE8zQXdRdEZBSzlkamItMXdzeGNFS3FmcHBqRkwyZXVvcW55SUJtT2FTb3luSHN3c2NnRDNySm9MV18ySVk1S2ZINS1oSWx3RXNyS0J4SWtQ?oc=5",
+      "source": "The Hill",
+      "feed": "Google News: exact Strait of Hormuz",
+      "publishedAt": "2026-04-22T02:56:00.000Z",
+      "summary": "Trump says Iran keeping Strait of Hormuz closed to ‘save face’ &nbsp;&nbsp; The Hill",
+      "signal": "closed",
+      "weight": 5,
+      "reason": "Uses direct closure/blockage language without being framed as hypothetical.",
+      "credibility": 1
+    },
+    {
+      "title": "Iran live: Iranian gunboat fires on container ship in Strait of Hormuz",
+      "link": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=69e879a28824479dbf24bad8440eeaa1&url=https%3a%2f%2fwww.msn.com%2fen-gb%2fnews%2fworld%2firan-live-iranian-gunboat-fires-on-container-ship-in-strait-of-hormuz%2far-AA21rwuG&c=1250029698336880612&mkt=en-gb",
+      "source": "Bing News: Strait of Hormuz",
+      "feed": "Bing News: Strait of Hormuz",
+      "publishedAt": "2026-04-22T00:27:10.000Z",
+      "summary": "Iran-US war latest: Iranian gunboat fires on container ship in Strait of Hormuz after Trump extends ceasefire - US president vows to continue blockading Iranian ports as Tehran refuses to send negotia ...",
+      "signal": "risk",
+      "weight": 2,
+      "reason": "Mentions security or shipping-risk terms but not a confirmed closure.",
+      "credibility": 1
+    },
+    {
+      "title": "Live updates: Iran attacks container ship in Strait of Hormuz after Trump extends ceasefire",
+      "link": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=69e879a28824479dbf24bad8440eeaa1&url=https%3a%2f%2fwww.nbcnews.com%2fworld%2firan%2flive-blog%2flive-updates-iran-trump-ceasefire-hormuz-attack-peace-talks-israel-rcna341361&c=887860541833360807&mkt=en-gb",
+      "source": "Bing News: Strait of Hormuz",
+      "feed": "Bing News: Strait of Hormuz",
+      "publishedAt": "2026-04-22T00:26:00.000Z",
+      "summary": "President Donald Trump said that he was extending the ceasefire with Iran indefinitely so its leaders “can come up with a unified proposal” in peace talks,but that the U.S. naval blockade will ...",
+      "signal": "risk",
+      "weight": 2,
+      "reason": "Mentions security or shipping-risk terms but not a confirmed closure.",
+      "credibility": 1
+    },
+    {
+      "title": "Iran Attacks Container Ship Near Strait of Hormuz Hours After Ceasefire Extension",
+      "link": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=69e879a28824479dbf24bad8440eeaa1&url=https%3a%2f%2fwww.msn.com%2fen-in%2fnews%2fworld%2firan-attacks-container-ship-near-strait-of-hormuz-hours-after-ceasefire-extension%2far-AA21r5Wr&c=13218904717641844201&mkt=en-gb",
+      "source": "Bing News: Strait of Hormuz",
+      "feed": "Bing News: Strait of Hormuz",
+      "publishedAt": "2026-04-22T00:11:00.000Z",
+      "summary": "United States President Donald Trump extended the Iran ceasefire indefinitely, without a deadline.",
+      "signal": "risk",
+      "weight": 2,
+      "reason": "Mentions security or shipping-risk terms but not a confirmed closure.",
+      "credibility": 1
+    },
+    {
+      "title": "Iran attacks ship in Strait of Hormuz, complicating diplomatic efforts to resume talks",
+      "link": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=69e879a28824479dbf24bad8440eeaa1&url=https%3a%2f%2fwww.cnbctv18.com%2fworld%2firan-attacks-ship-in-strait-of-hormuz-tehran-washington-peace-talks-donald-trump-ceasefire-extension-ws-l-19891122.htm&c=2399767733826887764&mkt=en-gb",
+      "source": "Bing News: Strait of Hormuz",
+      "feed": "Bing News: Strait of Hormuz",
+      "publishedAt": "2026-04-22T00:07:00.000Z",
+      "summary": "Iran attacks container ship in Strait of Hormuz, raising tensions as Trump extends ceasefire and Pakistan pushes fragile US Iran peace talks ...",
+      "signal": "risk",
+      "weight": 2,
+      "reason": "Mentions security or shipping-risk terms but not a confirmed closure.",
+      "credibility": 1
+    },
+    {
+      "title": "Iran fires on container ship in Strait of Hormuz",
+      "link": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=69e879a28824479dbf24bad8440eeaa1&url=https%3a%2f%2fwww.msn.com%2fen-ie%2fnews%2fworld%2firan-fires-on-container-ship-in-strait-of-hormuz%2far-AA21rTZn&c=16490063031969799107&mkt=en-gb",
+      "source": "Bing News: Strait of Hormuz",
+      "feed": "Bing News: Strait of Hormuz",
+      "publishedAt": "2026-04-21T23:37:34.000Z",
+      "summary": "The United Kingdom Maritime Trade Operations (UKMTO) centre said the attack happened at around 7.55am local time in the strait.",
+      "signal": "risk",
+      "weight": 3,
+      "reason": "Mentions security or shipping-risk terms but not a confirmed closure.",
+      "credibility": 1
+    },
+    {
+      "title": "The Strait of Hormuz closure forces a choice: Ration oil now or pay a steep price later - Atlantic Council",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNTnNrSl9TeFRzeHRoUG1BLV9mNjRZajRqNUtKZlVLaEJYVG1pYThZYjJ6dU1ITVpSNnRMR1AwdmotOXlPTV8ydVk1bHlnYVZvWkhicFJNME9fdE5EVDZGajEzaURhcTlKcDhOSTg4TU9sT0FPelVFZ3F2MWhzQ2tUMjlFYzJYQUhmS1VJdjhlbmZTT1k3a1ZBZERkZlRWX19YODZ2WDV1M3ItVENERy1uNUlnS29WeW13SWk0Ukp5dV9ic1BjeVdkc2FR?oc=5",
+      "source": "Atlantic Council",
+      "feed": "Google News: closure and shipping terms",
+      "publishedAt": "2026-04-21T22:08:43.000Z",
+      "summary": "The Strait of Hormuz closure forces a choice: Ration oil now or pay a steep price later &nbsp;&nbsp; Atlantic Council",
+      "signal": "closed",
+      "weight": 5,
+      "reason": "Uses direct closure/blockage language without being framed as hypothetical.",
+      "credibility": 1
+    }
+  ],
+  "totalRelevantItems": 157,
+  "errors": [],
+  "method": "Daily RSS/news search scan. The newest direct open/closed report drives the verdict; threats and hypotheticals are treated as risk, not closure. This is not AIS, legal, insurance, or navigation advice.",
+  "status": "closed",
+  "answer": "Likely closed",
+  "headline": "The newest direct report says closed, after earlier open-language coverage.",
+  "summary": "The tracker gives the latest direct update the steering wheel. At this point the Strait is not a place for cheerful assumptions."
+}

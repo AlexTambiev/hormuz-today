@@ -1,0 +1,21 @@
+{
+  "name": "hormuz-open-tracker",
+  "version": "1.0.0",
+  "description": "A daily news-scan tracker for whether the Strait of Hormuz appears open today.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "strait-of-hormuz",
+    "news",
+    "tracker"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}
