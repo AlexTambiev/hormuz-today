@@ -25,13 +25,13 @@ This project is ready to deploy as a Cloudflare Worker with static assets.
 2. In Cloudflare, go to Workers & Pages > Create application > Import a repository.
 3. Select this repository.
 4. Choose Workers, not Pages.
-5. Use `hormuz-status` as the Worker name. It must match `name = "hormuz-status"` in `wrangler.toml`.
+5. Use `hormuz-today` as the Worker name. It must match `name = "hormuz-today"` in `wrangler.toml`.
 6. Set the root directory to `/`.
 7. Leave the build command empty unless Cloudflare asks for one.
 8. Use `npx wrangler deploy` as the deploy command.
 9. Save and deploy.
 
-The KV namespace is declared in `wrangler.toml` without an ID so Cloudflare can create it during deployment. If the dashboard asks for an explicit namespace, create a Workers KV namespace named `hormuz-status-status-kv`, copy its namespace ID, and add it under `[[kv_namespaces]]`:
+The KV namespace is declared in `wrangler.toml` without an ID so Cloudflare can create it during deployment. If the dashboard asks for an explicit namespace, create a Workers KV namespace named `hormuz-today-status-kv`, copy its namespace ID, and add it under `[[kv_namespaces]]`:
 
 ```toml
 [[kv_namespaces]]
