@@ -76,9 +76,10 @@ const OPEN_PATTERNS = [
 ];
 
 const NEGATED_OPEN_PATTERNS = [
-  /\b(?:impossible|unable|cannot|can't|not\s+able)\s+to\s+reopen\b/,
-  /\bno\s+reopening\b/,
-  /\bnot\s+reopening\b/,
+  /\b(?:impossible|unable|cannot|can't|not\s+able)\b[\s\S]{0,40}\b(?:open(?:ed|ing|s)?|reopen(?:ed|ing|s)?)\b/,
+  /\b(?:open(?:ed|ing|s)?|reopen(?:ed|ing|s)?)\b[\s\S]{0,40}\b(?:impossible|unable|cannot|can't|not\s+possible|not\s+allowed|not\s+likely)\b/,
+  /\bno\s+(?:reopening|opening)\b/,
+  /\bnot\s+(?:reopening|opening)\b/,
   /\breopening\s+is\s+not\s+(?:possible|allowed|likely)\b/,
   /\breopen(?:ing|ed|s)?\s+is\s+not\s+(?:possible|allowed|likely)\b/,
 ];

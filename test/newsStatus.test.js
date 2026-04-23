@@ -52,6 +52,20 @@ test("negated reopening language is not classified as open", () => {
   assert.ok(result.weight >= 4);
 });
 
+test("cannot be opened language is classified as closed", () => {
+  const result = classifyItem(
+    item("Iran says Strait of Hormuz cannot be opened due to ceasefire breaches", "", "BBC"),
+  );
+  assert.equal(result.signal, "closed");
+});
+
+test("reopening not possible language is classified as closed", () => {
+  const result = classifyItem(
+    item("Iran says reopening Strait of Hormuz 'not possible'", "", "Bing News: Strait of Hormuz"),
+  );
+  assert.equal(result.signal, "closed");
+});
+
 test("negated reopening language can produce a closed verdict", () => {
   const evidence = [
     classifyItem(
