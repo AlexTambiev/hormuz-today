@@ -75,6 +75,14 @@ const OPEN_PATTERNS = [
   /\bnavigation\s+(?:continues|resumes)\b/,
 ];
 
+const NEGATED_OPEN_PATTERNS = [
+  /\b(?:impossible|unable|cannot|can't|not\s+able)\s+to\s+reopen\b/,
+  /\bno\s+reopening\b/,
+  /\bnot\s+reopening\b/,
+  /\breopening\s+is\s+not\s+(?:possible|allowed|likely)\b/,
+  /\breopen(?:ing|ed|s)?\s+is\s+not\s+(?:possible|allowed|likely)\b/,
+];
+
 const RISK_PATTERNS = [
   /\battack(?:s|ed|ing)?\b/,
   /\bseiz(?:e|es|ed|ing|ure)\b/,
@@ -252,6 +260,7 @@ export function classifyItem(item) {
   const closureMatches =
     countMatches(CLOSURE_PATTERNS, text) + countMatches(BLOCKADE_OF_STRAIT_PATTERNS, text);
   const openMatches = countMatches(OPEN_PATTERNS, text);
+  const negatedOpen = hasAny(NEGATED_OPEN_PATTERNS, text);
   const riskMatches = countMatches(RISK_PATTERNS, text);
   const hypothetical = hasAny(HYPOTHETICAL_PATTERNS, text);
   const negatedStraitClosure = hasAny(NEGATED_STRAIT_CLOSURE_PATTERNS, text);
@@ -276,6 +285,10 @@ export function classifyItem(item) {
     signal = "threat";
     weight = 2 + credibility;
     reason = "Discusses closure language, but framed as a threat, warning, or possibility.";
+  } else if (negatedOpen) {
+    signal = "closed";
+    weight = 3 + credibility;
+    reason = "Mentions reopening, but frames it as impossible or not possible.";
   } else if (openMatches) {
     signal = "open";
     weight = (openInTitle ? 3 : 2) + credibility;
