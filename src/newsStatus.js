@@ -5,6 +5,7 @@ import {
   DEFAULT_FEED_TIMEOUT_MS,
   DEFAULT_LOOKBACK_DAYS,
   DEFAULT_STATUS_TIMEZONE,
+  SOURCE_CONFIG_VERSION,
   classifyItem,
   compareByRecency,
   dateKey,
@@ -46,7 +47,7 @@ export async function getCachedStatus() {
 
 export async function getStatusForToday() {
   const cached = await getCachedStatus();
-  if (cached && cached.date === londonDateKey()) {
+  if (cached?.date === londonDateKey() && cached.sourceConfigVersion === SOURCE_CONFIG_VERSION) {
     return cached;
   }
 

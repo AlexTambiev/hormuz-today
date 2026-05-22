@@ -2,6 +2,7 @@ import {
   DEFAULT_FEED_TIMEOUT_MS,
   DEFAULT_LOOKBACK_DAYS,
   DEFAULT_STATUS_TIMEZONE,
+  SOURCE_CONFIG_VERSION,
   dateKey,
   runNewsScan,
 } from "../src/statusCore.js";
@@ -38,6 +39,10 @@ async function storeStatus(env, status) {
   return status;
 }
 
+function isFreshCachedStatus(status, today) {
+  return status?.date === today && status.sourceConfigVersion === SOURCE_CONFIG_VERSION;
+}
+
 async function refreshStatus(env) {
   const status = await runNewsScan({
     fetchImpl: fetch,
@@ -51,7 +56,7 @@ async function getFreshStatus(env, { force = false } = {}) {
   const cached = await getCachedStatus(env);
   const today = dateKey(new Date(), config(env).timezone);
 
-  if (!force && cached?.date === today) {
+  if (!force && isFreshCachedStatus(cached, today)) {
     return cached;
   }
 
@@ -71,7 +76,7 @@ async function handleStatus(request, env, ctx) {
     const cached = await getCachedStatus(env);
     const today = dateKey(new Date(), config(env).timezone);
 
-    if (cached?.date === today) {
+    if (isFreshCachedStatus(cached, today)) {
       return json(cached);
     }
 

@@ -1,6 +1,7 @@
 export const DEFAULT_STATUS_TIMEZONE = "Europe/London";
 export const DEFAULT_LOOKBACK_DAYS = 7;
 export const DEFAULT_FEED_TIMEOUT_MS = 12000;
+export const SOURCE_CONFIG_VERSION = "2026-05-22-non-google-feeds";
 
 export const SOURCES = [
   {
@@ -388,6 +389,7 @@ export function verdictFromEvidence(
     timezone,
     generatedAt: now.toISOString(),
     lookbackDays,
+    sourceConfigVersion: SOURCE_CONFIG_VERSION,
     sourceHealth,
     evidence: topEvidence,
     totalRelevantItems: items.length,
