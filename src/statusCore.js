@@ -210,7 +210,15 @@ export async function fetchFeed(
     });
 
     if (!response.ok) {
-      throw new Error(`${response.status} ${response.statusText}`);
+      const contentType = response.headers.get("content-type");
+      const body = await response.text().catch(() => "");
+      const detail = stripHtml(body).slice(0, 140);
+      const parts = [`${response.status} ${response.statusText}`];
+
+      if (contentType) parts.push(contentType);
+      if (detail) parts.push(detail);
+
+      throw new Error(parts.join(" - "));
     }
 
     const xml = await response.text();

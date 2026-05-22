@@ -365,15 +365,22 @@ h2 {
 
 .source-list li {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 18px;
   padding: 16px 18px;
   background: #fbf8f1;
 }
 
+.source-list strong {
+  min-width: 0;
+}
+
 .source-list span {
   color: var(--muted);
-  white-space: nowrap;
+  max-width: min(46vw, 420px);
+  text-align: right;
+  overflow-wrap: anywhere;
 }
 
 .caveat p {

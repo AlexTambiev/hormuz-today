@@ -76,14 +76,16 @@ function renderEvidence(evidence = []) {
 
 function renderSources(sources = []) {
   elements.sourceList.innerHTML = sources
-    .map(
-      (source) => `
+    .map((source) => {
+      const status = source.ok ? `${source.count} items` : `failed${source.error ? `: ${source.error}` : ""}`;
+
+      return `
         <li>
           <strong>${escapeHtml(source.source)}</strong>
-          <span>${source.ok ? `${source.count} items` : "failed"}</span>
+          <span title="${escapeHtml(status)}">${escapeHtml(status)}</span>
         </li>
-      `,
-    )
+      `;
+    })
     .join("");
 }
 
