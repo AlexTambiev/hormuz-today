@@ -77,12 +77,18 @@ function renderEvidence(evidence = []) {
 function renderSources(sources = []) {
   elements.sourceList.innerHTML = sources
     .map((source) => {
-      const status = source.ok ? `${source.count} items` : `failed${source.error ? `: ${source.error}` : ""}`;
+      const rawStatus = source.ok
+        ? `${source.count} items`
+        : `failed${source.error ? `: ${source.error}` : ""}`;
+      const status =
+        !source.ok && /google/i.test(source.source) && /503|sorry/i.test(source.error || "")
+          ? "blocked by Google automated-traffic protection"
+          : rawStatus;
 
       return `
         <li>
           <strong>${escapeHtml(source.source)}</strong>
-          <span title="${escapeHtml(status)}">${escapeHtml(status)}</span>
+          <span title="${escapeHtml(rawStatus)}">${escapeHtml(status)}</span>
         </li>
       `;
     })

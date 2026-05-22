@@ -1,17 +1,9 @@
 export const DEFAULT_STATUS_TIMEZONE = "Europe/London";
 export const DEFAULT_LOOKBACK_DAYS = 7;
 export const DEFAULT_FEED_TIMEOUT_MS = 12000;
-export const SOURCE_CONFIG_VERSION = "2026-05-22-non-google-feeds";
+export const SOURCE_CONFIG_VERSION = "2026-05-22-google-opportunistic";
 
 export const SOURCES = [
-  {
-    name: "Google News: exact Strait of Hormuz",
-    url: "https://news.google.com/rss/search?q=%22Strait%20of%20Hormuz%22%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
-  },
-  {
-    name: "Google News: closure and shipping terms",
-    url: "https://news.google.com/rss/search?q=%22Strait%20of%20Hormuz%22%20%28closed%20OR%20closure%20OR%20reopened%20OR%20shipping%20OR%20tanker%20OR%20transit%29%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
-  },
   {
     name: "Bing News: Strait of Hormuz",
     url: "https://www.bing.com/news/search?q=%22Strait%20of%20Hormuz%22&format=rss",
@@ -31,6 +23,14 @@ export const SOURCES = [
   {
     name: "MarineLink maritime news",
     url: "https://www.marinelink.com/rss",
+  },
+  {
+    name: "Google News: exact Strait of Hormuz",
+    url: "https://news.google.com/rss/search?q=%22Strait%20of%20Hormuz%22%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+  },
+  {
+    name: "Google News: closure and shipping terms",
+    url: "https://news.google.com/rss/search?q=%22Strait%20of%20Hormuz%22%20%28closed%20OR%20closure%20OR%20reopened%20OR%20shipping%20OR%20tanker%20OR%20transit%29%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
   },
 ];
 
