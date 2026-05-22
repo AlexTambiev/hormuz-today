@@ -38,10 +38,6 @@ async function storeStatus(env, status) {
   return status;
 }
 
-function hasSourceFailures(status) {
-  return status?.sourceHealth?.some((source) => !source.ok);
-}
-
 async function refreshStatus(env) {
   const status = await runNewsScan({
     fetchImpl: fetch,
@@ -55,7 +51,7 @@ async function getFreshStatus(env, { force = false } = {}) {
   const cached = await getCachedStatus(env);
   const today = dateKey(new Date(), config(env).timezone);
 
-  if (!force && cached?.date === today && !hasSourceFailures(cached)) {
+  if (!force && cached?.date === today) {
     return cached;
   }
 
@@ -75,7 +71,7 @@ async function handleStatus(request, env, ctx) {
     const cached = await getCachedStatus(env);
     const today = dateKey(new Date(), config(env).timezone);
 
-    if (cached?.date === today && !hasSourceFailures(cached)) {
+    if (cached?.date === today) {
       return json(cached);
     }
 

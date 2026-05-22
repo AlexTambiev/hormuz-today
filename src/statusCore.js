@@ -16,8 +16,20 @@ export const SOURCES = [
     url: "https://www.bing.com/news/search?q=%22Strait%20of%20Hormuz%22&format=rss",
   },
   {
+    name: "Bing News: closure and shipping terms",
+    url: "https://www.bing.com/news/search?q=%22Strait%20of%20Hormuz%22%20(closed%20OR%20closure%20OR%20reopened%20OR%20shipping%20OR%20tanker%20OR%20transit)&format=rss",
+  },
+  {
+    name: "BBC News: Middle East",
+    url: "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml",
+  },
+  {
     name: "gCaptain search feed",
     url: "https://gcaptain.com/feed/?s=Strait%20of%20Hormuz",
+  },
+  {
+    name: "MarineLink maritime news",
+    url: "https://www.marinelink.com/rss",
   },
 ];
 
@@ -34,6 +46,7 @@ const HIGH_CREDIBILITY_SOURCES = [
   "lloyd's list",
   "tradewinds",
   "gcaptain",
+  "marinelink",
   "maritime executive",
   "ukmto",
   "u.s. navy",
